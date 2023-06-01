@@ -12,6 +12,7 @@ html {
 
 header {
     display: flex;
+    justify-content: space-around;
 }
 
 #headerSearch,
@@ -92,7 +93,25 @@ li {
 }
 
 .persoClique {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+}
+
+#type {
+    font-size: xx-large;
+    width: 200px;
+
+}
+
+#headerFilter {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#headerLogo {
+    display: flex;
+    justify-content: center;
 }

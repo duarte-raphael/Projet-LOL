@@ -21,11 +21,21 @@
             <img class="logoSite" src="../images/titre.png" alt="logo du site">
         </section>
         <section id="headerFilter">
+            <form action="">
+                <select name="selectTypes" id="selectTypes">
+                    <option value="Fighter">Fighter</option>
+                    <option value="Tank">Tank</option>
+                    <option value="Mage">Mage</option>
+                    <option value="Assassin">Assassin</option>
+                    <option value="Marksman">Marksman</option>
+                    <option value="Support">Support</option>
+                </select>
+            </form>
         </section>
     </header>
 
     <main>
-        <article class="persoClique">
+        <article class="persoClique" id="persoClique">
             <section id="popUpClic"></section>
             <section id="graph">
                 <canvas id="graphic"></canvas>

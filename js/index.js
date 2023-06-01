@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             return data[cle];
         });
 
-        console.log(tabChampion);
+
         //boucle mon tableau
         for (let i = 0; i < tableauChampion.length; i++) {
             const li = document.createElement('li');
@@ -136,6 +136,8 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 
             li.addEventListener('click', (event) => {
+                const persoClique = document.getElementById('persoClique');
+                persoClique.style.display = "flex";
                 let tabUpdate = [
                     hp, hpperlevel, mp, mpperlevel, movespeed, armor, armorperlevel, spellblock,
                     spellblockperlevel, attackrange, hpregen, hpregenperlevel, mpregen, mpregenperlevel,
@@ -151,41 +153,35 @@ document.addEventListener('DOMContentLoaded', async function () {
                 tabStats.data.datasets[0].data = tabUpdate;
                 tabStats.data.datasets[0].label = "Les Stats de " + tableauChampion[i][0].id;
                 tabStats.update()
-
+                console.log(tableauChampion[i][0].tags[0]);
                 popUpClic.append(li2)
             })
-
-
-
-
-
         }
 
 
+        selectTypes.addEventListener('change', handleTypeSelection);
+
+        function handleTypeSelection() {
+            const selectTypes = document.getElementById('selectTypes');
+            const valeurType = selectTypes.value;
+
+            // Réinitialiser la liste des champions
+            listeChampions.innerHTML = '';
+
+            // Filtrer les champions en fonction du type sélectionné
+            let championsFiltered = tabChampion.filter(champ => champ.tags.includes(valeurType));
+
+            for (let index = 0; index < championsFiltered.length; index++) {
+                const li3 = document.createElement('li');
+                const img3 = document.createElement('img');
+                const imageChampion = "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/champion/" + championsFiltered[index].id + ".png";
+                const nomChamp = championsFiltered[index].id;
+
+                img3.src = imageChampion;
+                li3.innerHTML = nomChamp;
+                li3.append(img3);
+                listeChampions.append(li3);
+            }
+        }
     }
-
-
-    // const selectTypes = document.getElementById('selectTypes');
-    // const selectTypeee = selectTypes.value;
-    // selectTypes.addEventListener('change', handleTypeSelection);
-
-    // function handleTypeSelection() {
-    //     const selectedType = selectTypes.value;
-
-    //     // Réinitialiser la liste de Pokémon
-
-    //     listePokemon.innerHTML = '';
-
-    //     // Construire l'URL avec le type sélectionné
-    //     const urlWithType = `https://pokeapi.co/api/v2/type/${selectedType}`;
-
-    //     // Effectuer la requête pour récupérer les Pokémon du type sélectionné
-    //     fetch(urlWithType, "GET", printPokeWithType)
-    // }
-
-
-
-
-
-
 });
