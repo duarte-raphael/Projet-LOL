@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/personnage.css">
+    <title>Personnage LOL</title>
+</head>
+
+<body>
+    <header>
+        <section id="headerSearch">
+            <form action="">
+                <label for="searchInput">Recherche un champion</label>
+                <input type="search" name="searchInput" id="searchInput">
+            </form>
+        </section>
+        <section id="headerLogo">
+            <img class="logoSite" src="../images/titre.png" alt="logo du site">
+        </section>
+        <section id="headerFilter">
+        </section>
+    </header>
+
+    <main>
+        <article class="persoClique">
+            <section id="popUpClic"></section>
+            <section id="graph">
+                <canvas id="graphic"></canvas>
+            </section>
+        </article>
+        <article>
+            <ul id="listeChampions"></ul>
+        </article>
+    </main>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+html {
+    background: url(../images/back1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.logoSite {
+    width: 500px;
+}
+
+header {
+    display: flex;
+}
+
+#headerSearch,
+#headerLogo,
+#headerFilter {
+    width: 33.3%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: xx-large;
+    text-decoration: underline;
+    color: rgb(73, 66, 0);
+}
+
+input {
+    margin-top: 10px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+article {
+
+    width: 80%;
+}
+
+img {
+    width: 100px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: large;
+    align-items: center;
+    font-weight: 1000;
+}
+
+#popUpClic,
+#graph {
+    width: max-content;
+}
+
+#popUpClic {
+    margin-right: 30px;
+}
+
+
+#popUpClic img {
+    width: 300px;
+}
+
+#graphic {
+    width: 800px !important;
+    height: 350px !important;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 20px;
+
+}
+
+.persoClique {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
