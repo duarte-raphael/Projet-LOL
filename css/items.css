@@ -1,0 +1,87 @@
+html {
+    background: url(../images/back2.webp) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.logoSite {
+    width: 500px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+#headerSearch,
+#headerLogo,
+#headerFilter {
+    width: 33.3%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+article {
+
+    width: 80%;
+}
+
+img {
+    width: 120px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: medium;
+    align-items: center;
+    font-weight: 1000;
+    margin-right: 20px;
+}
+
+#popUpClic,
+#graph {
+    width: max-content;
+}
+
+#popUpClic {
+    margin-right: 30px;
+}
+
+
+#popUpClic img {
+    width: 300px;
+}
+
+#graphic {
+    width: 800px !important;
+    height: 350px !important;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 20px;
+
+}
+
+.item {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerLogo {
+    display: flex;
+    justify-content: center;
+}
